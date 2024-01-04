@@ -1,2 +1,223 @@
-<p> Hello </p>
-<p> I am Shuangpeng Bai. </p>
+<html>
+  <head>
+    <title>Shuangpeng's Home Page</title>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+      body {
+        margin: auto;
+        padding: auto;
+        width: 1024px;
+
+        color: #2E3436;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.4em;
+      }
+
+      .collapsible {
+        cursor: pointer;
+      }
+
+      .collapsible:hover {
+        background-color: #f1f1f1;
+      }
+
+      .collapsible:hover::after {
+        font-weight: bold;
+        float: right;
+        content: '\2913';
+      }
+
+      .active::after {
+        font-weight: bold;
+        float: right;
+        content: "\2912";
+      }
+
+      .active:hover::after {
+        font-weight: bold;
+        float: right;
+        content: "\2912";
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+      }
+
+      pre {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: lightgrey;
+        padding: 5px 5px 5px 5px;
+        overflow: auto;
+        background-color: #f1f1f1
+      } 
+
+      .pub-title {
+        font-size: medium;
+        font-weight: bold;
+        float:left;
+      }
+      .pub-links {
+        font-weight: bold;
+        float:right;
+      }
+      .pub-conf {
+        font-size: medium;
+        font-style: italic;
+      }
+      .pub-author {
+        font-size: medium;
+      }
+
+      img { vertical-align: bottom; }
+  
+      a {  color: #008cba; text-decoration: none; }
+
+      li { margin-bottom: 15px; }
+    </style> 
+  </head>
+
+  <body bgcolor="#ffffff">
+    <table border="0">
+      <tbody>
+      <tr height="5"></tr>
+      <tr>
+        <td>
+          <img align="middle" border="0" src="images/photo.jpeg" width="220" class="imgborder">
+        </td>
+        <td width="30">
+          <br>
+        </td>
+        <td align="left">
+          <p> <h2> Shuangpeng Bai </h2></p>
+          Ph.D. Candidate<br>
+          College of Information Sciences and Technology<br>
+          The Pennsylvania State University<br><br>
+          E-mail: baisp at psu dot edu<br>
+          <!--
+          <br>
+          <a href=cv/cv.pdf.html>CV</a>
+          ---
+          <a href=https://scholar.google.com/citations?user=3aaJwkoAAAAJ&hl=en>Google Scholar</a>
+          ---
+          <a href="https://twitter.com/huhong789?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Twitter</a>
+          <br>
+          -->
+        </td>
+      </tr></tbody>
+    </table>
+  
+    <hr>
+    <strong>Short Bio:</strong>
+    I am a second-year Ph.D. candidate at <a href="https://www.psu.edu/">Penn State University</a>, advised by <a href="https://huhong789.github.io/">Prof. Hong Hu</a>. 
+    Before joining Penn State University, I obtained my Bachelor's degree from Beijing Jiaotong University and Master's degree from University of Chinese Academy of Sciences. 
+    My research interests include Operating System Security, especially vulnerability detection and exploitation.
+    <br><br>
+
+    <hr>
+    <h2>Publications</h2>
+    <ol reversed>
+
+    </div>
+    <li class=collapsible>
+      <span class=pub-title>
+        DSS: Discrepancy-Aware Seed Selection Method for ICS Protocol Fuzzing
+      </span>
+      
+      <span class=pub-links>
+        <a href="https://dl.acm.org/doi/10.1007/978-3-030-78375-4_2"><img alt="Website" src="images/www.svg" height=15px></a>
+        <!-- <a href="slides/viper-slides.pdf"><img alt="Slides" src="images/slides.svg" height=15px></a>  -->
+        <a href="papers/DSS.pdf"><img alt="Paper" src="images/file.svg" height=15px></a>
+      </span>
+     
+      <br>
+      <span class=pub-author>
+        <b>Shuangpeng Bai</b>, Hui Wen, Dongliang Fang, Yue Sun, Puzhuo Liu, and Limin Sun
+      </span>
+      <br>
+      In <span class=pub-conf>
+        The 19th International Conference on Applied Cryptography and Network Security (ACNS 2021). [Acc Rate: 19.9%]
+      </span>
+    </li>
+    <div class=content>
+      Industrial Control System (ICS), as the core of the critical infrastructure, 
+      its vulnerabilities threaten physical world security. 
+      Mutation-based black-box fuzzing is a popular method for vulnerability discovery in ICS, 
+      and the diversification of seeds is crucial to its performance. 
+      However, the ICS devices are dedicated devices whose programs are challenging to get, 
+      protocols are unknown, and execution traces are hard to obtain in real-time. 
+      These restrictions impede seed selection, thereby reducing the efficiency of fuzzing. 
+      Therefore, it has become our primary goal to select a high-quality seed set 
+      containing as few seeds as possible with extensive triggered traces.
+      In this paper, we present a novel automatic seed selection method called DSS, 
+      selecting high-quality seeds for improving fuzzing efficiency. 
+      The method is based on the observation that dissimilar response messages 
+      are generated by different device execution processes in most cases, 
+      which helps us build the connection of messages discrepancy and execution traces discrepancy to guide DSS. 
+      Expressly, we point out that dissimilar messages are effective indicators of different execution paths. 
+      Therefore, choosing ICS messages with high discrepancy as seeds can bring 
+      more initial execution traces and fewer seeds with the same semantic, 
+      which are essential to black-box fuzzing. Our experiments show that the quantity of seeds selected by DSS 
+      is significantly less than the traditional method when achieving the same trace coverage.
+      <br/>
+      <p></p>
+    </div>
+
+    </ol>
+    <hr>
+
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Teaching Assistant</strong><br>
+        IST 543 Foundations of Software Security
+        <span style="float:right;">[Spring 2024]</span><br>
+      </li>
+      <li><strong>External Reviewer</strong><br>
+        ACM Conference on Computer and Communications Security (CCS)
+        <span style="float:right;">[2023]</span><br>
+        Network and Distributed System Security Symposium (NDSS)
+        <span style="float:right;">[2023, 2024]</span><br>
+      </li>
+    </ul>
+    <hr>
+
+
+  <script>
+    function collapse_it(c, i) {
+      console.log(coll);
+      console.log(i)
+      c[i].classList.toggle("active");
+      var content = c[i].nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+
+      var j;
+      for (j = 0; j < c.length; j++) {
+        if (j == i) continue;
+        var other_content = c[j].nextElementSibling;
+        if (other_content.style.display === "block") {
+          c[j].classList.toggle("active")
+          other_content.style.display = "none";
+        }
+      } 
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var index;
+
+    for (index = 0; index < coll.length; index++) {
+      coll[index].addEventListener("click", collapse_it.bind(null, coll, index));
+    }
+  </script>
+
+</html>
+
